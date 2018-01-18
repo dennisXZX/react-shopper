@@ -5,9 +5,14 @@ import { removeShoppingItemById, removePocketMoneyById } from '../actions';
 
 class ShoppingListContainer extends Component {
   render() {
+    // sort the shopping list
+    const sortedShoppingList = this.props.shoppingList.sort((a, b) => {
+      return a.name > b.name;
+    })
+
     return (
       <ShoppingList
-        shoppingList={this.props.shoppingList}
+        shoppingList={sortedShoppingList}
         removePocketMoneyById={this.props.removePocketMoneyById}
         removeShoppingItemById={this.props.removeShoppingItemById} />
     )

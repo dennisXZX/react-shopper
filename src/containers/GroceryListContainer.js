@@ -5,9 +5,14 @@ import { addGroceryById, addPocketMoneyById } from '../actions';
 
 class GroceryContainer extends Component {
   render() {
+    // sort the grocery list
+    const sortedGroceryList = this.props.groceryItemList.sort((a, b) => {
+      return a.name > b.name;
+    })
+
     return (
       <GroceryList
-        groceryItemList={this.props.groceryItemList}
+        groceryItemList={sortedGroceryList}
         addPocketMoneyById={this.props.addPocketMoneyById}
         addGroceryById={this.props.addGroceryById} />
     )

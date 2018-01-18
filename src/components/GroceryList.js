@@ -1,7 +1,6 @@
 import React from 'react'
 
 const GroceryList = (props) => {
-
   const renderGroceryList = () => {
     if (props.groceryItemList.length > 0) {
       return (
