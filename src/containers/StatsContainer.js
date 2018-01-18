@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Stats from '../components/Stats';
+import Stats from '../components/ShoppingStats';
 import { connect } from 'react-redux';
 
 class StatsContainer extends Component {
