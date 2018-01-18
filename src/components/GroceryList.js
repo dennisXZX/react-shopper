@@ -11,7 +11,10 @@ const GroceryList = (props) => {
               <li
                 key={item.id}
                 className="list-group-item"
-                onClick={() => props.addGroceryById(item.id)}>
+                onClick={() => {
+                  props.addGroceryById(item.id);
+                  props.addPocketMoneyById(item.id);
+                }}>
                 <span>{item.name}</span>
                 <span className="label label-info">$ {item.cost}</span>
                 <span className="label label-warning">{item.calories} kcal</span>

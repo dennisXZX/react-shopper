@@ -10,7 +10,10 @@ const ShoppingList = (props) => {
             return (
               <li
                 key={item.id}
-                onClick={() => props.removeShoppingItemById(item.id)}
+                onClick={() => {
+                  props.removeShoppingItemById(item.id);
+                  props.removePocketMoneyById(item.id);
+                }}
                 className="list-group-item">
                 <span>{item.name}</span>
                 <span className="label label-info">$ {item.cost}</span>

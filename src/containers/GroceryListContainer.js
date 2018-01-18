@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import GroceryList from '../components/GroceryList';
 import { connect } from 'react-redux';
-import { addGroceryById } from '../actions';
+import { addGroceryById, addPocketMoneyById } from '../actions';
 
 class GroceryContainer extends Component {
   render() {
     return (
       <GroceryList
         groceryItemList={this.props.groceryItemList}
+        addPocketMoneyById={this.props.addPocketMoneyById}
         addGroceryById={this.props.addGroceryById} />
     )
   }
@@ -22,7 +23,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    addGroceryById: (id) => dispatch(addGroceryById(id))
+    addGroceryById: (id) => dispatch(addGroceryById(id)),
+    addPocketMoneyById: (id) => dispatch(addPocketMoneyById(id))
   }
 }
 
