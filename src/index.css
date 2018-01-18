@@ -1,5 +1,5 @@
 html {
-// this defines what 1rem is (10px)
+/* this defines what 1rem is (10px) */
 font-size: 62.5%;
 }
 
@@ -10,19 +10,28 @@ body {
   box-sizing: border-box;
 }
 
+.jumbotron {
+  color: #fff;
+  margin: 0;
+  background-image: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
 .grocery-bg {
   background-color: #E4F1FE;
   padding: 1.5rem;
+  height: 365px;
 }
 
 .shopping-bg {
   background-color: #d7e7fe;
   padding: 1.5rem;
+  height: 365px;
 }
 
 .stats-bg {
   background-color: #E4F1FE;
   padding: 1.5rem;
+  height: 365px;
 }
 
 .grocery-bg li, .shopping-bg li {
@@ -35,4 +44,22 @@ body {
 
 .list-group .label {
   margin: .4rem;
+}
+
+.checkout {
+  margin-top: 20px;
+}
+
+.checkout button, .able {
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+  color: #fff;
+  font-size: 2rem;
+  height: 5rem;
+  background-color: mediumseagreen;
+}
+
+.checkout .disabled {
+  background-color: #d9534f;
 }

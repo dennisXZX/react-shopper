@@ -4,6 +4,7 @@ import GroceryListContainer from './containers/GroceryListContainer';
 import ShoppingListContainer from './containers/ShoppingListContainer';
 import ShoppingStatsContainer from './containers/ShoppingStatsContainer';
 import PocketStatsContainer from './containers/PocketStatsContainer';
+import CheckoutContainer from './containers/CheckoutContainer';
 
 class App extends Component {
   render() {
@@ -19,6 +20,9 @@ class App extends Component {
           <GroceryListContainer />
           <ShoppingListContainer />
           <ShoppingStatsContainer />
+        </div>
+        <div className="row">
+          <CheckoutContainer />
         </div>
       </div>
     );
