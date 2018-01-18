@@ -1,1 +1,2 @@
 export const ADD_GROCERY = "ADD_GROCERY";
+export const REMOVE_SHOPPING_ITEM = "REMOVE_SHOPPING_ITEM";

@@ -1,33 +1,36 @@
-import { ADD_GROCERY } from '../actions/actionTypes';
+import { ADD_GROCERY, REMOVE_SHOPPING_ITEM } from '../actions/actionTypes';
 import groceryItemList from '../data/groceryItems';
 
 const initialState = {
-  groceryItemList: groceryItemList,
-  shoppingList: []
+  groceryItemList: groceryItemList
 }
 
-function updateGroceryList(state, action) {
+function removeItemFromGroceryList(state, action) {
   // filter the grocery list
   const groceryList = state.groceryItemList.filter(item => item.id !== action.id);
 
-  // identify the clicked grocery item
-  const selectedGroceryItem = state.groceryItemList.find((item) => {
+  return {
+    groceryItemList: groceryList
+  };
+}
+
+function addItemToGroceryList(state, action) {
+  // identify the selected item
+  const selectedItem = groceryItemList.find(item => {
     return item.id === action.id;
   })
 
-  // update the shopping list
-  const updatedShoppingList = state.shoppingList.concat(selectedGroceryItem);
-
   return {
-    groceryItemList: groceryList,
-    shoppingList: updatedShoppingList
-  };
+    groceryItemList: state.groceryItemList.concat(selectedItem)
+  }
 }
 
 export default function(state = initialState, action) {
   switch (action.type) {
     case ADD_GROCERY:
-      return updateGroceryList(state, action);
+      return removeItemFromGroceryList(state, action);
+    case REMOVE_SHOPPING_ITEM:
+      return addItemToGroceryList(state, action)
     default:
       return state;
   }
