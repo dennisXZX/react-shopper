@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GroceryListContainer from './containers/GroceryListContainer';
 import ShoppingListContainer from './containers/ShoppingListContainer';
-import Stats from './components/Stats';
+import StatsContainer from './containers/StatsContainer';
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
       <div>
         <GroceryListContainer />
         <ShoppingListContainer />
-        <Stats />
+        <StatsContainer />
       </div>
     );
   }

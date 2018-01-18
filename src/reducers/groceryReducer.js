@@ -16,12 +16,12 @@ function removeItemFromGroceryList(state, action) {
 
 function addItemToGroceryList(state, action) {
   // identify the selected item
-  const selectedItem = groceryItemList.find(item => {
+  const selectedGroceryItem = groceryItemList.find(item => {
     return item.id === action.id;
   })
 
   return {
-    groceryItemList: state.groceryItemList.concat(selectedItem)
+    groceryItemList: [...state.groceryItemList, selectedGroceryItem]
   }
 }
 

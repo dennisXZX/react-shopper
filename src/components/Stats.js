@@ -1,19 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Stats extends Component {
-  render() {
-    return (
-      <div className="col-md-4">
-        <h2 className="text-center">Stats Items</h2>
-        <ul className="list-group">
-          <li className="list-group-item">1</li>
-          <li className="list-group-item">2</li>
-          <li className="list-group-item">3</li>
-          <li className="list-group-item">4</li>
-        </ul>
-      </div>
-    )
-  }
+const Stats = (props) => {
+  return (
+    <div className="col-md-4">
+      <h2 className="text-center">Shopping Stats</h2>
+      <ul className="list-group">
+        <li className="list-group-item">Cost - $ {props.totalCost}</li>
+        <li className="list-group-item">Calories - {props.totalCalories} Kcal</li>
+        <li className="list-group-item">Weight - {props.totalWeight} mg</li>
+      </ul>
+    </div>
+  )
 }
 
-export default Stats;
+export default Stats
