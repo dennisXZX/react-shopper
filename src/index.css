@@ -34,6 +34,12 @@ body {
   height: 365px;
 }
 
+.coupon {
+  margin-left: 15px;
+  font-size: 2rem;
+  padding: 10px;
+}
+
 .grocery-bg li, .shopping-bg li {
   cursor: pointer;
 }

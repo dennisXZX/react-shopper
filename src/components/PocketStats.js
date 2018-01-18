@@ -8,6 +8,11 @@ const PocketStats = (props) => {
     <div className="col-md-12 text-center">
       <h2 style={{ margin: '20px 0' }}>
         You have <span className={labelStyle}>$ {props.pocketMoney}</span> to spend on grocery today!
+      <button
+        className="coupon"
+        onClick={props.useCoupon}>
+        Use Coupon
+      </button>
       </h2>
     </div>
   )
